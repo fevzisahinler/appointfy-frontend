@@ -3,7 +3,7 @@
 import * as React from "react"
 import {
   ArrowUpCircleIcon,
-  BarChartIcon,
+  BarChartIcon, CalendarIcon,
   CameraIcon,
   ClipboardListIcon,
   DatabaseIcon,
@@ -13,9 +13,9 @@ import {
   FolderIcon,
   HelpCircleIcon,
   LayoutDashboardIcon,
-  ListIcon,
+  ListIcon, MessageCircleIcon,
   SearchIcon,
-  SettingsIcon,
+  SettingsIcon, StarIcon,
   UsersIcon,
 } from "lucide-react"
 
@@ -35,120 +35,29 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Appointfy",
+    email: "info@barbershop.com",
+    avatar: "/avatars/barber.jpg",
   },
   navMain: [
-    {
-      title: "Dashboard",
-      url: "#",
-      icon: LayoutDashboardIcon,
-    },
-    {
-      title: "Lifecycle",
-      url: "#",
-      icon: ListIcon,
-    },
-    {
-      title: "Analytics",
-      url: "#",
-      icon: BarChartIcon,
-    },
-    {
-      title: "Projects",
-      url: "#",
-      icon: FolderIcon,
-    },
-    {
-      title: "Team",
-      url: "#",
-      icon: UsersIcon,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: CameraIcon,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: FileTextIcon,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: FileCodeIcon,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
+    { title: "Dashboard", url: "#", icon: LayoutDashboardIcon },
+    { title: "Appointments", url: "#", icon: ListIcon },
+    { title: "Customers", url: "#", icon: UsersIcon },
+    { title: "Services", url: "#", icon: FileTextIcon },
+    { title: "Staff", url: "#", icon: FolderIcon },
+    { title: "Analytics", url: "#", icon: BarChartIcon },
   ],
   navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: SettingsIcon,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: HelpCircleIcon,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: SearchIcon,
-    },
+    { title: "Notifications", url: "#", icon: HelpCircleIcon },
+    { title: "Calendar", url: "#", icon: CalendarIcon },
+    { title: "Messages", url: "#", icon: MessageCircleIcon },
+    { title: "Settings", url: "#", icon: SettingsIcon },
   ],
   documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: DatabaseIcon,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: ClipboardListIcon,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: FileIcon,
-    },
+    { name: "Revenue Reports", url: "#", icon: ClipboardListIcon },
+    { name: "Customer History", url: "#", icon: FileIcon },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -162,7 +71,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="#">
                 <ArrowUpCircleIcon className="h-5 w-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">Appointfy.</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
